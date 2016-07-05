@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Capture Photo</title>
+        <script type="text/javascript" charset="utf-8" src="cordova.js"></script>
+        <script type="text/javascript" charset="utf-8">
+            var pictureSource;
+            var destinationType;
+            document.addEventListener("deviceready",onDeviceReady,false);
+            function onDeviceReady() {
+                pictureSource=navigator.camera.PictureSourceType;
+                destinationType=navigator.camera.DestinationType;
+            }
+        function onPhotoDataSuccess(imageData) {
+            console.log(imageData);
+            var smallImage = document.getElementById('smallImage');
+            smallImage.style.display = 'block';
+            smallImage.src = "data:image/jpeg;base64," + imageData;    }
+        function onPhotoURISuccess(imageURI) {
+            console.log(imageURI);
+            var largeImage = document.getElementById('largeImage');
+            largeImage.style.display = 'block';
+            largeImage.src = imageURI;    }
+        function capturePhoto() {
+            navigator.camera.getPicture(onPhotoDataSuccess, onFail, { quality: 50,        destinationType: destinationType.DATA_URL });    }
+        function capturePhotoEdit() {
+            navigator.camera.getPicture(onPhotoDataSuccess, onFail, { quality: 20, allowEdit: true,        destinationType: destinationType.DATA_URL });    }
+        function getPhoto(source) {
+            navigator.camera.getPicture(onPhotoURISuccess, onFail, { quality: 50,        destinationType: destinationType.FILE_URI,        sourceType: source });    }
+        function onFail(message) {      alert('Failed because: ' + message);    }
+            </script>
+    </head>
+    <body>
+        <button onclick="capturePhoto();">Capture Photo</button> <br>
+        <button onclick="capturePhotoEdit();">Capture Editable Photo</button> <br>
+        <button onclick="getPhoto(pictureSource.PHOTOLIBRARY);">From Photo Library</button><br>
+        <button onclick="getPhoto(pictureSource.SAVEDPHOTOALBUM);">From Photo Album</button><br>
+        <img style="display:none;width:60px;height:60px;" id="smallImage" src="" />
+        <img style="display:none;" id="largeImage" src="" />
+    </body>
+</html>
