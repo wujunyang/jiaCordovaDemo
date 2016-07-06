@@ -28,11 +28,29 @@
 #import "AppDelegate.h"
 #import "MainViewController.h"
 
+
+#define FilePath ([[NSFileManager defaultManager] URLForDirectory:NSCachesDirectory inDomain:NSUserDomainMask appropriateForURL:nil create:YES error:nil])
+
+
+
 @implementation AppDelegate
 
 - (BOOL)application:(UIApplication*)application didFinishLaunchingWithOptions:(NSDictionary*)launchOptions
 {
     self.viewController = [[MainViewController alloc] init];
+    //远程方式
+    //self.viewController.startPage=@"http://www.cnblogs.com";
+    
+    //沙盒方式
+//    NSString *curFilePath=[NSString stringWithFormat:@"file://%@/www",[NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) objectAtIndex:0]];
+//    NSLog(@"路径为:%@",curFilePath);
+//    if ([[NSFileManager defaultManager] fileExistsAtPath:curFilePath]) {
+//        self.viewController.wwwFolderName = curFilePath;
+//    }
+    
+    
+    self.viewController.startPage=@"index.html";
+    
     return [super application:application didFinishLaunchingWithOptions:launchOptions];
 }
 
