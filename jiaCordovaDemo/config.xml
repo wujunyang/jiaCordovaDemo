@@ -24,6 +24,9 @@
     <feature name="Geolocation">
         <param name="ios-package" value="CDVLocation" />
     </feature>
+    <feature name="HelloWorld">
+        <param name="ios-package" value="CDVHelloWorld" />
+    </feature>
     <name>jiaCordovaDemo</name>
     <description>
         A sample Apache Cordova application that responds to the deviceready event.

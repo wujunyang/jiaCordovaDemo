@@ -75,6 +75,26 @@
 {
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
+    
+    NSNotificationCenter *center = [NSNotificationCenter defaultCenter];
+    [center addObserver:self
+               selector:@selector(onNotification:)
+                   name:CDVPluginResetNotification  // 开始加载
+                 object:nil];
+    [center addObserver:self
+               selector:@selector(onNotificationed:)
+                   name:CDVPageDidLoadNotification  // 加载完成
+                 object:nil];
+}
+
+
+- (void)onNotification:(NSNotification *)text{
+    NSLog(@"－－－－－开始等待------");
+}
+
+
+- (void)onNotificationed:(NSNotification *)text{
+    NSLog(@"－－－－－结束等待------");
 }
 
 - (void)viewDidUnload

@@ -17,6 +17,7 @@
 		3047A5121AB8059700498E2A /* build-debug.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = 3047A50F1AB8059700498E2A /* build-debug.xcconfig */; };
 		3047A5131AB8059700498E2A /* build-release.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = 3047A5101AB8059700498E2A /* build-release.xcconfig */; };
 		3047A5141AB8059700498E2A /* build.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = 3047A5111AB8059700498E2A /* build.xcconfig */; };
+		340976A11D329FF000FB02BB /* CDVHelloWorld.m in Sources */ = {isa = PBXBuildFile; fileRef = 340976A01D329FF000FB02BB /* CDVHelloWorld.m */; settings = {ASSET_TAGS = (); }; };
 		346A8F651D2BD32900D7C647 /* libCordova.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 346A8F641D2BD2E500D7C647 /* libCordova.a */; };
 		5C9DA336AAE1462F98A1102B /* CDVLocation.m in Sources */ = {isa = PBXBuildFile; fileRef = 68F3EC7C161E4426B895DB2B /* CDVLocation.m */; };
 		779E290B98124A33911F4D07 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8CBD88F129844045AABC9912 /* AVFoundation.framework */; };
@@ -51,6 +52,8 @@
 		3047A5101AB8059700498E2A /* build-release.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; name = "build-release.xcconfig"; path = "cordova/build-release.xcconfig"; sourceTree = SOURCE_ROOT; };
 		3047A5111AB8059700498E2A /* build.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; name = build.xcconfig; path = cordova/build.xcconfig; sourceTree = SOURCE_ROOT; };
 		32CA4F630368D1EE00C91783 /* jiaCordovaDemo-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "jiaCordovaDemo-Prefix.pch"; sourceTree = "<group>"; };
+		3409769F1D329FF000FB02BB /* CDVHelloWorld.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CDVHelloWorld.h; sourceTree = "<group>"; };
+		340976A01D329FF000FB02BB /* CDVHelloWorld.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CDVHelloWorld.m; sourceTree = "<group>"; };
 		346A8F5F1D2BD2E500D7C647 /* CordovaLib.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = CordovaLib.xcodeproj; path = CordovaLib/CordovaLib.xcodeproj; sourceTree = "<group>"; };
 		58B2EB65F3E04D2DAA4D706C /* ImageIO.framework */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = wrapper.framework; name = ImageIO.framework; path = System/Library/Frameworks/ImageIO.framework; sourceTree = SDKROOT; };
 		68F3EC7C161E4426B895DB2B /* CDVLocation.m */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 4; includeInIndex = 0; lastKnownFileType = sourcecode.c.objc; name = CDVLocation.m; path = "cordova-plugin-geolocation/CDVLocation.m"; sourceTree = "<group>"; };
@@ -177,6 +180,8 @@
 				A755A844374D4B16AE2AE652 /* CDVExif.h */,
 				68F3EC7C161E4426B895DB2B /* CDVLocation.m */,
 				73EEC264E3E54E50AC68DD94 /* CDVLocation.h */,
+				3409769F1D329FF000FB02BB /* CDVHelloWorld.h */,
+				340976A01D329FF000FB02BB /* CDVHelloWorld.m */,
 			);
 			name = Plugins;
 			path = jiaCordovaDemo/Plugins;
@@ -302,6 +307,7 @@
 				1D3623260D0F684500981E51 /* AppDelegate.m in Sources */,
 				302D95F114D2391D003F00A1 /* MainViewController.m in Sources */,
 				7D206787ED474CB1878AD8CB /* CDVLogger.m in Sources */,
+				340976A11D329FF000FB02BB /* CDVHelloWorld.m in Sources */,
 				1B21D72C5C9B4B1B8DCC3272 /* UIImage+CropScaleOrientation.m in Sources */,
 				F6109BBBA0F444A292064463 /* CDVCamera.m in Sources */,
 				B66D01F19E8E4B0FBCDCAE51 /* CDVJpegHeaderWriter.m in Sources */,
